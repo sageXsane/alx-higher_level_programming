@@ -9,7 +9,7 @@ def print_matrix_integer(matrix=[[]]):
     for row in range(0, len(matrix)):
         last = len(matrix[row])
         for col in range(0, last):
-                print("{}".format(matrix[row][col]), end = "")
-                if (col != last - 1):
-                     print(end = " ")
-        print(end = "\n")
+            print("{:d}".format(matrix[row][col]), end="")
+            if (col != last - 1):
+                print(end=" ")
+        print(end="\n")

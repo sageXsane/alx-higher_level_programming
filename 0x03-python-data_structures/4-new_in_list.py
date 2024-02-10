@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def new_in_list(my_list, idx, element):
-    """new_in_list function - replaces an element of a list at a specific position
+    """new_in_list function
 
     Args:
         my_list: integer list
