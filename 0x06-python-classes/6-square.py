@@ -79,7 +79,7 @@ class Square:
                 value : a tuple containing two integers
         """
         if value is not None:
-            if len(value) != 2 and (value[0] < 0 and value[1] < 0):
+            if len(value) != 2 or (not isinstance(value[0], int) or not isinstance(value[1], int)) or (value[0] < 0 or value[1] < 0):
                 raise TypeError("position must be a tuple of 2 \
 positive integers")
             else:
@@ -96,7 +96,7 @@ positive integers")
                 print(end="\n")
             for r in range(0, self.__size):
                 for x in range(0, self.__position[0]):
-                    print("_", end="")
+                    print(" ", end="")
                 for c in range(0, self.__size):
                     print("#", end="")
                 print(end="\n")
