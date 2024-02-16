@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""2-square module
+    contains only initialing method for square class
+"""
+
 
 class Square:
     """Square class with init method"""
