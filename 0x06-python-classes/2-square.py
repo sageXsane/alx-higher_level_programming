@@ -1,8 +1,15 @@
 #!/usr/bin/python3
 
 class Square:
-
+    """Square class with init method"""
     def __init__(self, size=0):
+        """Initialises square object with size
+            which is an optional private instance attribute
+            Check to see whether size is a valid integer greater than 0 else
+            raise relevant errors and exception messages
+        Args:
+            size (int): size of the square
+        """
         if size is not None:
             try:
                 if not isinstance(size, int):
