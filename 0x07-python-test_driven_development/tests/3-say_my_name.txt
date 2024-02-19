@@ -35,4 +35,4 @@ Case names have spaces
 >>> say_my_name("  Sanelisiwe  ",  "  Bhengu")
 My name is   Sanelisiwe     Bhengu
 
-# doctest: +REPORT_NDIFF
+# doctest: +REPORT_NDIFF, +NORMALIZE_WHITESPACE
