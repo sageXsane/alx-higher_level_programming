@@ -1,13 +1,13 @@
 #!/usr/bin/python3
+""" add_integer module
 
-""" add_integer module 
-    
     contains a function called add_integer that returns the sum of two integers
 """
 
+
 def add_integer(a, b=98):
     """ add_integer functions
-       
+
         Adds two casted int numbers( which are originally int or float)
         Args:
         a: first number
@@ -24,4 +24,3 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
     else:
         return int(a) + int(b)
-
