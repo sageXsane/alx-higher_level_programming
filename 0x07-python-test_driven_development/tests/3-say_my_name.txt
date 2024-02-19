@@ -1,0 +1,34 @@
+The 'say_my_name' module
+===============================
+
+displays the name and surname of a give person
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Expected normal case
+>>> say_my_name("Sanelisiwe", "Bhengu")
+My name is Sanelisiwe Bhengu
+
+Case only first name
+>>> say_my_name("Sanelisiwe")
+My name is Sanelisiwe 
+
+Case first_name is not a valid string value
+>>> say_my_name(12)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+Case last_name is not a valid string value
+>>> say_my_name("Sanelisiwe", 12)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+Case first and last names are empty
+>>> say_my_name("", "")
+My name is  
+
+Case names have spaces
+>>> say_my_name("  Sanelisiwe  ",  "  Bhengu")
+My name is   Sanelisiwe     Bhengu
+
+# doctest: +REPORT_NDIFF
