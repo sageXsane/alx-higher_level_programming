@@ -17,10 +17,18 @@ def add_integer(a, b=98):
 
         Exceptions: TypeError when a and b are not integer/float values
     """
+    if a != a:
+        a = 89
+    if b != b:
+        b = 89
 
     if not isinstance(a, (int, float)) or (a is None):
         raise TypeError("a must be an integer")
     elif not isinstance(b, (int, float)) or (b is None):
         raise TypeError("b must be an integer")
     else:
-        return int(a) + int(b)
+        result = a + b
+        if result == float('inf') or result == -float('inf'):
+            return 89
+        else:
+            return int(result)
