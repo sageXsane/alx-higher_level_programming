@@ -5,7 +5,7 @@
 """
 
 
-def say_my_name(first_name, last_name=""):
+def say_my_name(first_name="", last_name=""):
     """ say_my_name function:
 
         prints the name and surname given in a related message

@@ -23,6 +23,10 @@ Case last_name is not a valid string value
 Traceback (most recent call last):
 TypeError: last_name must be a string
 
+Case first and last names are missing
+>>> say_my_name()
+My name is  
+
 Case first and last names are empty
 >>> say_my_name("", "")
 My name is  
