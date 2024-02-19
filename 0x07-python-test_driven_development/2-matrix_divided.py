@@ -34,18 +34,18 @@ def matrix_divided(matrix, div):
 
     if len(matrix) == 0:
         raise TypeError("matrix must be a matrix (list of lists) \
-                        of integers/floats")
+of integers/floats")
     for row in matrix:
         if not isinstance(row, list):
-            TypeError("matrix must be a matrix (list of lists) \
-                      of integers/floats")
+            TypeError("matrix must be a matrix (list of lists)\
+ of integers/floats")
         if len(row) != len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
         div_row = []
         for elem in row:
             if not isinstance(elem, (int, float)):
                 raise TypeError("matrix must be a matrix (list of lists) of \
-                                integers/floats")
+integers/floats")
             div_row.append(round(elem / div, 2))
         div_matrix.append(div_row)
     return div_matrix
