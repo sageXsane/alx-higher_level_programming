@@ -38,6 +38,24 @@ Case divisor is None:
 Traceback (most recent call last):
 TypeError: div must be a number
 
+Case divisor is inf
+>>> matrix_divided([[100, 200, 300], [10, 20, 30], [1, 2, 3]], float('inf'))
+[[10.0, 20.0, 30.0], [1.0, 2.0, 3.0], [0.1, 0.2, 0.3]]
 
+Case divisor is -inf
+>>> matrix_divided([[100, 200, 300], [10, 20, 30], [1, 2, 3]], -float('inf'))
+[[10.0, 20.0, 30.0], [1.0, 2.0, 3.0], [0.1, 0.2, 0.3]]
+
+Case divisor is NaN
+>>> matrix_divided([[100, 200, 300], [10, 20, 30], [1, 2, 3]], float('NaN'))
+[[10.0, 20.0, 30.0], [1.0, 2.0, 3.0], [0.1, 0.2, 0.3]]
+
+Case divisor is empty
+>>> matrix_divided([[100, 200, 300], [10, 20, 30], [1, 2, 3]])
+[[100.0, 200.0, 300.0], [10.0, 20.0, 30.0], [1.0, 2.0, 3.0]]
+
+Case both arguments are empty
+>>> matrix_divided()
+[[1.0]]
 
 # doctest: +REPORT_NDIFF, +NORMALIZE_WHITESPACE

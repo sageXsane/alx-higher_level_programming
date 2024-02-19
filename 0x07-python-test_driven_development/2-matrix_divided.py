@@ -6,7 +6,7 @@
 """
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix=[[1]], div=1):
     """ matrix_divided function
 
         divides each element of a matrix by a divisor
@@ -31,7 +31,8 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     if not isinstance(div, (float, int)):
         raise TypeError("div must be a number")
-
+    if div == float('inf') or div == -float('inf') or div != div:
+        div = 10
     if len(matrix) == 0:
         raise TypeError("matrix must be a matrix (list of lists) \
 of integers/floats")
