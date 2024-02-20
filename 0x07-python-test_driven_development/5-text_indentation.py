@@ -29,9 +29,7 @@ def text_indentation(text=""):
             print("{}".format(line.strip()), end="\n\n")
             line = ""
     if line:
-        print("{}".format(line.strip()))
-
-
+        print("{}".format(line.strip()), end="")
 if __name__ == "__main__":
     import doctest
     doctest.testmod(Verbose=True)
