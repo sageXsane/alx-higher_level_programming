@@ -14,11 +14,9 @@ Normal case
 
 Case missing argument
 >>> print_square()
-<BLANKLINE>
 
 Case size = 0
 >>> print_square(0)
-<BLANKLINE>
 
 
 Case size = 10.2 (float)
