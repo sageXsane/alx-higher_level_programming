@@ -23,10 +23,11 @@ def print_square(size=0):
         raise ValueError("size must be >= 0")
     if size == 0:
         print(end="\n")
-    for row in range(0, size):
-        for col in range(0, size):
-            print("#", end="")
-        print(end="\n")
+    else:
+        for row in range(0, size):
+            for col in range(0, size):
+                print("#", end="")
+            print(end="\n")
 
 
 if __name__ == "__main__":
