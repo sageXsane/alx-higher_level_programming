@@ -29,4 +29,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer(), None)
 
+        "Case: max at the beginning of list"
+        self.assertEqual(max_integer([24, 12, 6, 3, 1]), 24)
 
+        "Case: list with only one element"
+        self.assertEqual(max_integer([12]), 12)
