@@ -82,8 +82,6 @@ class Rectangle:
 
     def __str__(self):
         """prints the rectangle using hash characters"""
-        print("This is the class symbol: {}".format(Rectangle.print_symbol))
-        print("This is the instance symbol: {}".format(self.print_symbol))
         rectangle = ""
         if (self.__width == 0) or (self.__height == 0):
             return rectangle
