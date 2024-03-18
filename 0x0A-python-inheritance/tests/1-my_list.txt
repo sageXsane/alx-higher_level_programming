@@ -48,4 +48,8 @@ Test with list with NaN value
 >>> my_list.print_sorted()
 [nan, 1, 2, 3]
 
+>>> my_list = MyList([1, 2, 3, 4, 5])
+>>> str(my_list)
+'[1, 2, 3, 4, 5]'
+
 # doctest: +REPORT_NDIFF, +NORMALIZE_WHITESPACE
