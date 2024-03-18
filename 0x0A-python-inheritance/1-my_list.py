@@ -12,9 +12,8 @@ class MyList(list):
             Sorts the mylist object
         """
 
-        cpy = self[:]
-        cpy.sort()
-        print(cpy)
+        sort_list = sorted(self)
+        print(sort_list)
 
     def __str__(self):
         """__str___ method
