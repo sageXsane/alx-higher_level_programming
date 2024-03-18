@@ -5,7 +5,10 @@ Has a MyList object that inherits methods and attributes from List class object
 >>> MyList = __import__('1-my_list').MyList
 
 Basic Test Case
->>> my_list = MyList([3, 1, 2])
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(1)
+>>> my_list.append(2)
 >>> my_list.print_sorted()
 [1, 2, 3]
 

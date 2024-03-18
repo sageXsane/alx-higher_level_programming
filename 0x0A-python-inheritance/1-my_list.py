@@ -11,5 +11,14 @@ class MyList(list):
         """ print_sorted method:
             Sorts the mylist object
         """
-        self.sort()
-        print(self)
+
+        cpy = self[:]
+        cpy.sort()
+        print(cpy)
+
+    def __str__(self):
+        """__str___ method
+        Displays nothing
+        """
+
+        return "[" + ", ".join(map(str, self)) + "]"
