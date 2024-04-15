@@ -28,6 +28,21 @@ Case value is not an integer(list):
 Traceback (most recent call last):
 TypeError: my_int must be an integer
 
+Case value is not an integer(string):
+>>> bg.integer_validator("my_int", "[1, 2, 3]")
+Traceback (most recent call last):
+TypeError: my_int must be an integer
+
+Case value is not an integer(tuple):
+>>> bg.integer_validator("my_int", (1, 2, 3))
+Traceback (most recent call last):
+TypeError: my_int must be an integer
+
+Case value is not an integer(dict):
+>>> bg.integer_validator("my_int", {1, 2, 3})
+Traceback (most recent call last):
+TypeError: my_int must be an integer
+
 Case string is empty
 >>> bg.integer_validator("", 2)
 
