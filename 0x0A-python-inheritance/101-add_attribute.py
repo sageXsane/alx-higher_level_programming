@@ -12,7 +12,7 @@ def add_attribute(a_class, attribute, value):
             attribute: atrribute
             value: attribute value
     """
-    if isinstance(a_class, (int, float, str, tuple)):
+    if isinstance(a_class, (int, float, str)):
         raise TypeError("can't add new attribute")
     if '__slots__' in dir(a_class):
         raise TypeError("can't add new attribute")
