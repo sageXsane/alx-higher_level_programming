@@ -14,7 +14,9 @@ def add_attribute(a_class, attribute, value):
     """
     if not isinstance(type(a_class), type):
         raise TypeError("can't add new attribute")
-    elif '__slots__' in dir(a_class):
+    if isinstance(a_class, (int, float, str, tuple)):
+        raise TypeError("can't add new attribute")
+    elif '__slots__' in dir(a_class) or not hasattr(a_class, "__dict__"):
         raise TypeError("can't add new attribute")
     elif hasattr(a_class, attribute):
         raise TypeError("can't add new attribute")
