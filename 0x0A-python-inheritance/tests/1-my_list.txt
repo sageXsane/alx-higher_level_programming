@@ -57,5 +57,12 @@ Test with list with NaN value
 >>> my_list.print_sorted()
 [nan, 1, 2, 3]
 
+Test if print_sorted returns new list
+>>> my_list = MyList([3, 1, 2])
+>>> sorted_list = my_list.print_sorted()
+[1, 2, 3]
+>>> print(my_list)
+[3, 1, 2]
+
 
 # doctest: +REPORT_NDIFF, +NORMALIZE_WHITESPACE
