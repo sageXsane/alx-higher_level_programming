@@ -12,9 +12,11 @@ def add_attribute(a_class, attribute, value):
             attribute: atrribute
             value: attribute value
     """
-    if isinstance(a_class, (int, float, str)):
+    if not isinstance(type(a_class), type):
         raise TypeError("can't add new attribute")
-    if '__slots__' in dir(a_class):
+    if isinstance(a_class, (int, float, str, tuple)):
+        raise TypeError("can't add new attribute")
+    elif '__slots__' in dir(a_class):
         raise TypeError("can't add new attribute")
     elif hasattr(a_class, attribute):
         raise TypeError("can't add new attribute")
