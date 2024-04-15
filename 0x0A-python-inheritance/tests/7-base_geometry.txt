@@ -23,7 +23,7 @@ Case value is empty
 Traceback (most recent call last):
 TypeError: my_int must be an integer
 
-Case value is not an integer:
+Case value is not an integer(list):
 >>> bg.integer_validator("my_int", [1, 2, 3])
 Traceback (most recent call last):
 TypeError: my_int must be an integer
@@ -31,6 +31,20 @@ TypeError: my_int must be an integer
 Case string is empty
 >>> bg.integer_validator("", 2)
 
+Case empty parameters
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Case value is empty:
+>>> bg.integer_validator("name")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Call area method:
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
 
 
 # doctest: +REPORT_NDIFF, +NORMALIZE_WHITESPACE
