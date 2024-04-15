@@ -43,6 +43,11 @@ Case value is not an integer(dict):
 Traceback (most recent call last):
 TypeError: my_int must be an integer
 
+Case value is not an integer(boolean):
+>>> bg.integer_validator("my_int", True)
+Traceback (most recent call last):
+TypeError: my_int must be an integer
+
 Case string is empty
 >>> bg.integer_validator("", 2)
 
