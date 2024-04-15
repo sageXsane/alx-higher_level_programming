@@ -14,7 +14,7 @@ def add_attribute(a_class, attribute, value):
     """
     if isinstance(a_class, (int, float, str, list, dict, tuple, set)):
         raise TypeError("can't add new attribute")
-    elif isinstance(a_class, frozenset):
+    elif '__slots__' in dir(a_class):
         raise TypeError("can't add new attribute")
     elif attribute in dir(a_class):
         raise TypeError("can't add new attribute")
