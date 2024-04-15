@@ -1,0 +1,36 @@
+my_list module doctest
+=====================================
+
+>>> MyList = __import__('1-my_list').MyList
+>>> mylist = MyList([1, 4, 2, 3, 5])
+
+Normal case:
+>>> mylist.print_sorted()
+[1, 2, 3, 4, 5]
+
+Case negative int values
+>>> mylist = MyList([-1, -4, -2, -3, -5])
+>>> mylist.print_sorted()
+[-5, -4, -3, -2, -1]
+
+Case empty MyList:
+>>> mylist = MyList([])
+>>> mylist.print_sorted()
+[]
+
+Case single integer
+>>> mylist = MyList([42])
+>>> mylist.print_sorted()
+[42]
+
+Case alphabetising string values
+>>> myfruits = MyList(["Dragonfruit", "Apples", "Coconut", "Fig", "Banana"])
+>>> myfruits.print_sorted()
+['Apples', 'Banana', 'Coconut', 'Dragonfruit', 'Fig']
+
+Case duplicate values:
+>>> mylist = MyList([3, 4, 2, 3, 5])
+>>> mylist.print_sorted()
+[2, 3, 3, 4, 5]
+
+# doctest: +REPORT_NDIFF, +NORMALIZE_WHITESPACE
