@@ -11,3 +11,7 @@ class MyList(list):
         """  prints the list, but sorted (ascending sort) """
         sorted_list = sorted(self)
         print(sorted_list)
+
+
+    def __str__(self):
+        return super().__str__()
