@@ -12,6 +12,8 @@ class MyList(list):
         sorted_list = sorted(self)
         print(sorted_list)
 
-
     def __str__(self):
+        """ str method:
+            calls base classes str method
+        """
         return super().__str__()
