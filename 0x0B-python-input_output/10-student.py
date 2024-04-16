@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ student module """
-class_to_json = __import__('8-class_to_json').class_to_json
 
 
 class Student:
@@ -23,13 +22,15 @@ class Student:
             retrieves a dictionary representation of a Student instance
         """
         json_dict = {}
+        attr_lst = []
         if isinstance(attrs, list):
             if all(isinstance(elem, str) for elem in attrs):
-                for key in attrs:
-                    if hasattr(self, key):
-                        value = getattr(self, key)
-                        if isinstance(value, (list, dict, str, int, bool)):
-                            json_dict[key] = value
+                attr_lst = attrs
         else:
-            json_dict = class_to_json(self)
+            attr_lst = dir(self)
+        for key in attr_lst:
+            if hasattr(self, key) and key[0:2] != '__':
+                value = getattr(self, key)
+                if isinstance(value, (list, dict, str, int, bool)):
+                    json_dict[key] = value
         return json_dict
