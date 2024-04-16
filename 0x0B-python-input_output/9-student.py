@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ student module """
-class_to_json = __import__('8-class_to_json').class_to_json
 
 
 class Student:
