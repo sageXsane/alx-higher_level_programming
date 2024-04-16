@@ -22,4 +22,10 @@ class Student:
             calls class_to_json method to
             retrieves a dictionary representation of a Student instance
         """
-        return class_to_json(self)
+        json_dict = {}
+        for key in dir(self):
+            if key[0:2] != '__':
+                value = getattr(self, key)
+                if isinstance(value, (list, dict, str, int, bool)):
+                    json_dict[key] = value
+        return json_dict
